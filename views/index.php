@@ -31,7 +31,7 @@
         }
 
         .links-container a {
-            width: 80%;
+            width: 90%;
         }
 
         .w3-theme-l1:hover {
@@ -105,7 +105,7 @@
         <div class="links-container">
             <a href="https://shope.ee/6KdBdTPxVi" class="w3-button w3-round-xlarge w3-theme-l1 w3-border link" target="_blank">
                 <img src="/assets/images/ref.jpg" width="40px">
-                <div style="width: 100%;">Trở thành Shopee KOL Affiliate</div>
+                <div style="width: 100%;padding: 0 10px">Trở thành Shopee KOL Affiliate</div>
             </a>
         </div>
 
