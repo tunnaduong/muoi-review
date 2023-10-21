@@ -107,7 +107,7 @@
         <!-- Links section 2. Replace the # inside of the "" with your links. -->
         <h4 class="margin-top-2" style="text-align: center;">KIẾM TIỀN CÙNG SHOPEE</h4>
         <div class="links-container">
-            <a href="https://shope.ee/6KdBdTPxVi" class="w3-button w3-round-xlarge w3-theme-l1 w3-border link" target="_blank">
+            <a href="https://tndg.link/api/redirect?next=https://shope.ee/6KdBdTPxVi" class="w3-button w3-round-xlarge w3-theme-l1 w3-border link" target="_blank">
                 <img src="/assets/images/ref.jpg" width="40px">
                 <div style="width: 100%;padding: 0 10px">Trở thành Shopee KOL Affiliate</div>
             </a>
