@@ -1,3 +1,6 @@
+<?php
+require_once $_SERVER['DOCUMENT_ROOT'] . '/serverconnect.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -92,20 +95,25 @@
         <!-- Links section 1. Replace the # inside of the "" with your links. -->
         <h4 class="margin-top-2" style="text-align: center;">SẢN PHẨM REVIEW</h4>
         <div class="links-container">
-            <a href="https://tndg.link/api/redirect?next=https://shope.ee/5V450Mmc5O" class="w3-button w3-round-xlarge w3-theme-l1 w3-border link" target="_blank">
-                <img src="/assets/images/vn-11134207-7qukw-lk8zzmnhvjqs7d.jpg" width="40px">
-                <div style="width: 100%;">3. Combo bim bim Nhất thống</div>
-            </a>
-            <a href="https://tndg.link/api/redirect?next=https://shope.ee/2VQTLIIXDe" class="w3-button w3-round-xlarge w3-theme-l1 w3-border link" target="_blank">
-                <img src="/assets/images/vn-11134207-7r98o-lm09ay3m9azj83.jpg" width="40px">
-                <div style="width: 100%;">2. Ly giữ nhiệt Tyeso Wonder</div>
-            </a>
-            <a href="https://tndg.link/api/redirect?next=https://shope.ee/7zlPahHGcc" class="w3-button w3-round-xlarge w3-theme-l1 w3-border link" target="_blank">
-                <img src="/assets/images/vn-11134207-7qukw-lignj74y1824b2.jpg" width="40px">
-                <div style="width: 100%;">1. Bật lửa cute</div>
-            </a>
-            <!-- <br>
-            <a href="#" class="w3-button w3-round-xlarge w3-theme-l1 w3-border link" target="_blank">Instagram</a> -->
+            <?php
+            $sql = "SELECT * FROM products ORDER BY id DESC";
+            $result = $conn->query($sql);
+
+            if ($result->num_rows > 0) {
+                // output data of each row
+                while ($row = $result->fetch_assoc()) {
+            ?>
+                    <a href="<?php echo $row['link'] ?>" class="w3-button w3-round-xlarge w3-theme-l1 w3-border link" target="_blank">
+                        <img src="<?php echo $row['image'] ?>" width="40px">
+                        <div style="width: 100%;"><?php echo $row['name'] ?></div>
+                    </a>
+            <?php
+                }
+            } else {
+                echo "0 kết quả";
+            }
+            $conn->close();
+            ?>
         </div>
 
         <!-- Links section 2. Replace the # inside of the "" with your links. -->
