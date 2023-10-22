@@ -12,6 +12,8 @@ any("/api/add-product", "api/add_product.php");
 
 get('/api/get-products', 'api/get_products.php');
 
+post('/api/upload-image', 'api/upload_image.php')
+
 // ##################################################
 // ##################################################
 // ##################################################
