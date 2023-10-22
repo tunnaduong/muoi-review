@@ -43,7 +43,7 @@ if ($uploadOk == 0) {
     // if everything is ok, try to upload file
 } else {
     if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
-        echo "The file " . htmlspecialchars(basename($_FILES["fileToUpload"]["name"])) . " has been uploaded.";
+        echo json_encode(array("status" => "success", "message" => "The file " . htmlspecialchars(basename($_FILES["fileToUpload"]["name"])) . " has been uploaded.", "path" => "/assets/images/" . htmlspecialchars(basename($_FILES["fileToUpload"]["name"]))));
     } else {
         echo "Sorry, there was an error uploading your file.";
     }
