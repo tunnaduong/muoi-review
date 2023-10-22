@@ -8,6 +8,10 @@ require_once __DIR__ . '/router.php';
 
 get('/', 'views/index.php');
 
+any("/api/add-product", "api/add_product.php");
+
+get('/api/get-products', 'api/get_products.php');
+
 // ##################################################
 // ##################################################
 // ##################################################
