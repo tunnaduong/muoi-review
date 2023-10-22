@@ -6,6 +6,7 @@ $result = mysqli_query($conn, $sql) or die(mysqli_error($conn));
 $json_data = array();
 while ($rec = mysqli_fetch_assoc($result)) {
     $Subjson = array();
+    $Subjson['id'] = $rec['id'];
     $Subjson['name'] = $rec['name'];
     $Subjson['link'] = $rec['link'];
     $Subjson['image'] = $rec['image'];
