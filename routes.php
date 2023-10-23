@@ -14,6 +14,8 @@ get('/api/get-products', 'api/get_products.php');
 
 any('/api/upload-image', 'api/upload_image.php');
 
+get('/api/remove-product', 'api/remove_product.php');
+
 // ##################################################
 // ##################################################
 // ##################################################
