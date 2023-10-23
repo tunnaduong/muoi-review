@@ -1,11 +1,12 @@
 <?php
 if (!empty($_FILES['file_attachment']['name'])) {
-    $target_dir = "/assets/images/";
+    $target_dir = $_SERVER['DOCUMENT_ROOT'] . "/assets/images/";
     if (!file_exists($target_dir)) {
         mkdir($target_dir, 0777);
     }
     $target_file =
         $target_dir . basename($_FILES["file_attachment"]["name"]);
+
     $imageFileType =
         strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
     // Check if file already exists
